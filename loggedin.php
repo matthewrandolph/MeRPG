@@ -1,5 +1,6 @@
 <?php # Script 12.4 - loggedin.php
 // The user is redirected here from login.php.
+	<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
 
 // If no cookie is present, redirect the user:
 if (!isset($_COOKIE['user_id'])) {

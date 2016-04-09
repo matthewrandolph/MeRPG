@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+
 <?php
 
 if (!isset($_COOKIE['user_id'])) {
