@@ -29,15 +29,45 @@ if (mysqli_num_rows($r) == 1) {
   $lvl = calculate_level($exp);
   $next = to_next_level($exp);
 
-  echo "<p>Level $lvl</p>
-  <p>Current Experience: $exp</p>
-  <p>To Next Level Up: $next</p>
-  <progress value=$exp max=$next></progress>
-  <p><a href=\"add_activity.php?stat=strength\">Strength:</a> $str <a href=\"add_activity.php?stat=strength\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat=agility\">Agility:</a> $agi <a href=\"add_activity.php?stat=agility\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat=stamina\">Stamina:</a> $sta <a href=\"add_activity.php?stat=stamina\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat=intelligence\">Intelligence:</a> $int <a href=\"add_activity.php?stat=intelligence\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat=charisma\">Charisma:</a> $cha <a href=\"add_activity.php?stat=charisma\">Add Activity</a></p>";
+  echo "<h1>Level <span style='font-family:\"2dumb\"' id='lvl'>$lvl</span></h1>";
+
+  echo '<table align="center" cellspacing="5" cellpadding="5" width="75%">
+  <tr>
+    <td align="left"><b>Current Experience: ' . $exp . '</b></td>
+    <td align="left"><b>Next Level Up At: ' . $next . '</b></td>
+  </tr>
+  ';
+  echo "
+  <tr>
+    <td align=\"center\"><progress value=$exp max=$next></progress></td>
+  </tr>
+  <tr>
+    <td align=\"left\"><a href=\"add_activity.php?stat=strength\">Strength:</a></td>
+    <td align=\"left\">$str</td>
+    <td class='add' align=\"left\"><a href=\"add_activity.php?stat=strength\">Add Activity</a></td>
+  </tr>
+  <tr>
+    <td align=\"left\"><a href=\"add_activity.php?stat=agility\">Agility:</a></td>
+    <td align=\"left\">$agi</td>
+    <td nowrap class='add' align=\"left\"><a href=\"add_activity.php?stat=agility\">Add Activity</a></td>
+  </tr>
+  <tr>
+    <td><a href=\"add_activity.php?stat=stamina\">Stamina:</a></td>
+    <td>$sta</td>
+    <td nowrap class='add'><a href=\"add_activity.php?stat=stamina\">Add Activity</a></td>
+  </tr>
+  <tr>
+    <td><a href=\"add_activity.php?stat=intelligence\">Intelligence:</a></td>
+    <td>$int</td>
+    <td nowrap class='add'><a href=\"add_activity.php?stat=intelligence\">Add Activity</a></td>
+  </tr>
+  <tr>
+    <td><a href=\"add_activity.php?stat=charisma\">Charisma:</a></td>
+    <td>$cha</td>
+    <td nowrap class='add'><a href=\"add_activity.php?stat=charisma\">Add Activity</a></td>
+  </tr>
+  </table>
+  ";
 }
 
 include ("includes/footer.html");

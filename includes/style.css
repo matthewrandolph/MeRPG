@@ -159,6 +159,12 @@ a:hover {
 	font-family: '2dumb';
 	font-size: 15px;
 }
+#content td {
+	font-family: '2dumb';
+}
+#content td.add a {
+	color:#335322;
+}
 
 /* footer */
 #footer {
