@@ -3,19 +3,19 @@
  * Returns the current level, calculated from the amount of experience points
  */
   function calculate_level ($exp) {
-    if ($exp < 1300) {
+    if ($exp < 100) {
       return 1;
     }
-    if ($exp < 3300) {
+    if ($exp < 200) {
       return 2;
     }
-    if ($exp < 6000) {
+    if ($exp < 1000) {
       return 3;
     }
-    if ($exp < 10000) {
+    if ($exp < 6000) {
       return 4;
     }
-    if ($exp < 15000) {
+    if ($exp < 13000) {
       return 5;
     }
     if ($exp < 23000) {
@@ -70,20 +70,20 @@
    * Returns the amount of experience points required to hit the next level
    */
   function to_next_level ($exp) {
-    if ($exp < 1300) {
-      return 1300;
+    if ($exp < 100) {
+      return 100;
     }
-    if ($exp < 3300) {
-      return 3300;
+    if ($exp < 200) {
+      return 200;
+    }
+    if ($exp < 1000) {
+      return 1000;
     }
     if ($exp < 6000) {
       return 6000;
     }
-    if ($exp < 10000) {
-      return 10000;
-    }
-    if ($exp < 15000) {
-      return 15000;
+    if ($exp < 13000) {
+      return 13000;
     }
     if ($exp < 23000) {
       return 23000;
@@ -137,8 +137,9 @@
     return $exp;
   }
 
-  function award_experience ($lvl, $intensity) {
-    $offset = (mt_rand(50, 150) / 100.0);
+  function award_experience ($lvl, $intensity, $time) {
+
+    $hours = $time / 60.0;
 
     if ($intensity == 1) {
       $lvl -= 1;
@@ -148,76 +149,76 @@
 
     switch ($lvl) {
     case 0:
-        return floor(50 * $offset);
+        return floor(50 * $hours);
         break;
     case 1:
-        return floor(100 * $offset);
+        return floor(100 * $hours);
         break;
     case 2:
-        return floor(150 * $offset);
+        return floor(150 * $hours);
         break;
     case 3:
-        return floor(200 * $offset);
+        return floor(200 * $hours);
         break;
     case 4:
-        return floor(300 * $offset);
+        return floor(300 * $hours);
         break;
     case 5:
-        return floor(400 * $offset);
+        return floor(400 * $hours);
         break;
     case 6:
-        return floor(600 * $offset);
+        return floor(600 * $hours);
         break;
     case 7:
-        return floor(800 * $offset);
+        return floor(800 * $hours);
         break;
     case 8:
-        return floor(1200 * $offset);
+        return floor(1200 * $hours);
         break;
     case 9:
-        return floor(1600 * $offset);
+        return floor(1600 * $hours);
         break;
     case 10:
-        return floor(2400 * $offset);
+        return floor(2400 * $hours);
         break;
     case 11:
-        return floor(3200 * $offset);
+        return floor(3200 * $hours);
         break;
     case 12:
-        return floor(4800 * $offset);
+        return floor(4800 * $hours);
         break;
     case 13:
-        return floor(6400 * $offset);
+        return floor(6400 * $hours);
         break;
     case 14:
-        return floor(9600 * $offset);
+        return floor(9600 * $hours);
         break;
     case 15:
-        return floor(12800 * $offset);
+        return floor(12800 * $hours);
         break;
     case 16:
-        return floor(19200 * $offset);
+        return floor(19200 * $hours);
         break;
     case 17:
-        return floor(25600 * $offset);
+        return floor(25600 * $hours);
         break;
     case 18:
-        return floor(38400 * $offset);
+        return floor(38400 * $hours);
         break;
     case 19:
-        return floor(51200 * $offset);
+        return floor(51200 * $hours);
         break;
     case 20:
-        return floor(76800 * $offset);
+        return floor(76800 * $hours);
         break;
     case 21:
-        return floor(137000 * $offset);
+        return floor(137000 * $hours);
         break;
     case 22:
-        return floor(205000 * $offset);
+        return floor(205000 * $hours);
         break;
     default:
-        return floor(273000 * $offset);
+        return floor(273000 * $hours);
         break;
     }
   }

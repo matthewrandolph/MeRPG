@@ -1,8 +1,11 @@
 <?php
 
+$page_title = "Experience Awarded!";
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   include ('includes/functions.php');
+  include ('includes/header.php');
 
   require ('../../mysqli_connect.php'); // Connect to the database
 
@@ -29,17 +32,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $level = calculate_level( $row[1]);
 
       if (!empty($_POST['weight_training_low'])) {
-        $row[2] += award_experience(1, $level);
+        $row[2] += award_experience(1, $level, $_POST['weight_training_low']);
+        $row[1] += award_experience(1, $level, $_POST['weight_training_low']);
       }
       if (!empty($_POST['resistance_training_low'])) {
-        $row[2] += award_experience(1, $level);
+        $row[2] += award_experience(1, $level, $_POST['resistance_training_low']);
+        $row[1] += award_experience(1, $level, $_POST['resistance_training_low']);
       }
+
 
       // Make the UPDATE query:
       $q = "UPDATE stats SET experience=$row[1], strength=$row[2], agility=$row[3], stamina=$row[4], intelligence=$row[5], charisma=$row[6] WHERE user_id=$row[0]";
       $r = @mysqli_query($dbc, $q);
 
       if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
+
+        mysqli_close();
+          header ("Location: view_profile.php");
 
         // Print a message:
         echo '<h1>Thank you!</h1>
