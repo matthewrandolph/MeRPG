@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+
 <?php
   include ("includes/functions.php");
   echo calculate_level(1);

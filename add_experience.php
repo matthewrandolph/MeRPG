@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+
 <?php
 
 $page_title = "Experience Awarded!";

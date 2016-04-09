@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+	
 <?php # Script 12.6 - logout.php
 // This page lets the user logout.
 

@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+
+
 <?php # Script 9.3 - register.php
 $page_title = 'Register';
 include ('includes/header.php');

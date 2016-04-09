@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
+
 <?php # Script 12.5 - login.php #2
 // This page processes the login form submission.
 // The script now adds extra parameters to the setcookie() lines.
