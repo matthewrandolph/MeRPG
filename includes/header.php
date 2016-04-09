@@ -7,8 +7,8 @@
 </head>
 <body>
 	<div id="header">
-		<h1>Your Website</h1>
-		<h2>catchy slogan...</h2>
+		<h1>Me RPG</h1>
+		<h2>Become the best version of yourself</h2>
 	</div>
 	<div id="navigation">
 		<ul>
