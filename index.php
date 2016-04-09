@@ -3,8 +3,11 @@
 <head>
 </head>
 <body>
-  <?php include ("includes/header.php"); ?>
-  <h1>MyRPG</h1>
+  <?php
+    $page_title = "Welcome to MeRPG";
+    include ("includes/header.php");
+  ?>
+  <h1>MeRPG</h1>
   <p>Strength</p>
   <p>Agility</p>
   <p>Stamina</p>

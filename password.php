@@ -1,5 +1,9 @@
 <?php # Script 9.7 - password.php
 $page_title = 'Change Your Password';
+if (!isset($_COOKIE['user_id'])) {
+  header ("Location: login.php");
+  exit;
+}
 include ('includes/header.php');
 
 // Check for form submission:
