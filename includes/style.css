@@ -22,7 +22,7 @@ a:hover {
 
 /* body */
 body {
-	background:#ffffff;
+	background-image:'./img/bg.jpg';
 	color:#555;
 	font:0.8em "3dumb", Arial, Helvetica, "bitstream vera sans", sans-serif;
 }
