@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       $np = mysqli_real_escape_string($dbc, trim($_POST['pass1']));
     }
   } else {
-    $errors[] = 'You forgot to enter your password';
+    $errors[] = 'You forgot to enter your new password';
   }
 
   if (empty($errors)) { // If everything's OK.
@@ -102,6 +102,6 @@ mysqli_close($dbc);
   <p>Current Password: <input type="password" name="pass" size="10" maxlength="20" value="<?php if (isset($_POST['pass'])) echo $_POST['pass']; ?>" /></p>
   <p>New Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>
   <p>Confirm New Password: <input type="password" name="pass2" size="10" maxlength="20" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
-  <p><input type="submit" name="submit" value="Register" /></p>
+  <p><input type="submit" name="submit" value="Submit" /></p>
 </form>
 <?php include ('includes/footer.html'); ?>

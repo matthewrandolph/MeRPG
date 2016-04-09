@@ -123,6 +123,7 @@ input, select, .input {
 	color: #008040;
 	background: #FFFFFF;
 	border:1px dotted #004080;
+	cursor: pointer;
 }
 
 @font-face{

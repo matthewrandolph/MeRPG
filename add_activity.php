@@ -25,13 +25,13 @@
     $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
 		echo '<tr bgcolor="' . $bg . '">
   		<td align="left">Medium Intensity Weight Training</td>
-  		<td align="left"><input type="number" name="resistance_training_low" size="4" maxlength="20" value="<?php if (isset($_POST[\'weight_training_medium\'])) echo $_POST[\'weight_training_medium\']; ?>" /></td>
+  		<td align="left"><input type="number" name="weight_training_medium" size="4" maxlength="20" value="<?php if (isset($_POST[\'weight_training_medium\'])) echo $_POST[\'weight_training_medium\']; ?>" /></td>
   	</tr>
     ';
     $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
 		echo '<tr bgcolor="' . $bg . '">
   		<td align="left">High Intensity Weight Training</td>
-  		<td align="left"><input type="number" name="resistance_training_low" size="4" maxlength="20" value="<?php if (isset($_POST[\'resistance_training_high\'])) echo $_POST[\'weight_training_high\']; ?>" /></td>
+  		<td align="left"><input type="number" name="weight_training_high" size="4" maxlength="20" value="<?php if (isset($_POST[\'weight_training_high\'])) echo $_POST[\'weight_training_high\']; ?>" /></td>
   	</tr>
     ';
     $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
@@ -74,7 +74,7 @@
     $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
 		echo '<tr bgcolor="' . $bg . '">
   		<td align="left">Medium Intensity Cardiovascular Training</td>
-  		<td align="left"><input type="number" name="cardiovascular_training_low" size="4" maxlength="20" value="<?php if (isset($_POST[\'cardiovascular_training_medium\'])) echo $_POST[\'cardiovascular_training_medium\']; ?>" /></td>
+  		<td align="left"><input type="number" name="cardiovascular_training_medium" size="4" maxlength="20" value="<?php if (isset($_POST[\'cardiovascular_training_medium\'])) echo $_POST[\'cardiovascular_training_medium\']; ?>" /></td>
   	</tr>
     ';
     $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
@@ -152,14 +152,8 @@
 
     // Fetch and print all the records....
     $bg = '#eeeeee';
-  	$bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
-		echo '<form action="add_experience.php" method="post"><tr bgcolor="' . $bg . '">
-  		<td align="left">Light Reading</td>
-  		<td align="left"><input type="number" name="reading_medium" size="4" maxlength="20" value="<?php if (isset($_POST[\'reading_medium\'])) echo $_POST[\'reading_medium\']; ?>" /></td>
-  	</tr>
-  	';
     $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
-		echo '<tr bgcolor="' . $bg . '">
+		echo '<form action="add_experience.php" method="post"><tr bgcolor="' . $bg . '">
   		<td align="left">Spending Time With People</td>
   		<td align="left"><input type="number" name="spending_time" size="4" maxlength="20" value="<?php if (isset($_POST[\'spending_time\'])) echo $_POST[\'spending_time\']; ?>" /></td>
   	</tr>
@@ -172,8 +166,9 @@
     </table>';
   }
 
-  echo '
+  echo '<p></p>
     <input type="submit" name="submit" value="Submit" />
+    <input type="hidden" name="stat" value="' . $_GET['stat'] . '" />
     </form>
     ';
 

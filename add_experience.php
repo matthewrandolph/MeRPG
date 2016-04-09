@@ -30,42 +30,121 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       // Get the user_id:
       $row = mysqli_fetch_array($r, MYSQLI_NUM);
-
+      $run_query = false;
       $level = calculate_level( $row[1]);
 
       if (!empty($_POST['weight_training_low'])) {
         $row[2] += award_experience(1, $level, $_POST['weight_training_low']);
         $row[1] += award_experience(1, $level, $_POST['weight_training_low']);
+        $run_query = true;
+      }
+      if (!empty($_POST['weight_training_medium'])) {
+        $row[2] += award_experience(2, $level, $_POST['weight_training_medium']);
+        $row[1] += award_experience(2, $level, $_POST['weight_training_medium']);
+        $run_query = true;
+      }
+      if (!empty($_POST['weight_training_high'])) {
+        $row[2] += award_experience(3, $level, $_POST['weight_training_high']);
+        $row[1] += award_experience(3, $level, $_POST['weight_training_high']);
+        $run_query = true;
       }
       if (!empty($_POST['resistance_training_low'])) {
         $row[2] += award_experience(1, $level, $_POST['resistance_training_low']);
         $row[1] += award_experience(1, $level, $_POST['resistance_training_low']);
+        $run_query = true;
+      }
+      if (!empty($_POST['resistance_training_medium'])) {
+        $row[2] += award_experience(2, $level, $_POST['resistance_training_medium']);
+        $row[1] += award_experience(2, $level, $_POST['resistance_training_medium']);
+        $run_query = true;
+      }
+      if (!empty($_POST['resistance_training_high'])) {
+        $row[2] += award_experience(3, $level, $_POST['resistance_training_high']);
+        $row[1] += award_experience(3, $level, $_POST['resistance_training_high']);
+        $run_query = true;
+      }
+      if (!empty($_POST['cardiovascular_training_low'])) {
+        $row[3] += award_experience(1, $level, $_POST['cardiovascular_training_low']);
+        $row[1] += award_experience(1, $level, $_POST['cardiovascular_training_low']);
+        $run_query = true;
+      }
+      if (!empty($_POST['cardiovascular_training_medium'])) {
+        $row[3] += award_experience(2, $level, $_POST['cardiovascular_training_medium']);
+        $row[1] += award_experience(2, $level, $_POST['cardiovascular_training_medium']);
+        $run_query = true;
+      }
+      if (!empty($_POST['cardiovascular_training_high'])) {
+        $row[3] += award_experience(3, $level, $_POST['cardiovascular_training_high']);
+        $row[1] += award_experience(3, $level, $_POST['cardiovascular_training_high']);
+        $run_query = true;
+      }
+      if (!empty($_POST['sleep'])) {
+        $row[4] += award_experience(1, $level, floor($_POST['sleep']/16.0));
+        $row[1] += award_experience(1, $level, floor($_POST['sleep']/16.0));
+        $run_query = true;
+      }
+      if (!empty($_POST['reading_medium'])) {
+        $row[5] += award_experience(2, $level, $_POST['reading_medium']);
+        $row[1] += award_experience(2, $level, $_POST['reading_medium']);
+        $run_query = true;
+      }
+      if (!empty($_POST['reading_high'])) {
+        $row[5] += award_experience(3, $level, $_POST['reading_high']);
+        $row[1] += award_experience(3, $level, $_POST['reading_high']);
+        $run_query = true;
+      }
+      if (!empty($_POST['academics'])) {
+        $row[5] += award_experience(1, $level, floor($_POST['academics']/4));
+        $row[1] += award_experience(1, $level, floor($_POST['academics']/4));
+        $run_query = true;
+      }
+      if (!empty($_POST['puzzle_games'])) {
+        $row[5] += award_experience(2, $level, $_POST['puzzle_games']);
+        $row[1] += award_experience(2, $level, $_POST['puzzle_games']);
+        $run_query = true;
+      }
+      if (!empty($_POST['spending_time'])) {
+        $row[6] += award_experience(2, $level, $_POST['spending_time']);
+        $row[1] += award_experience(2, $level, $_POST['spending_time']);
+        $run_query = true;
+      }
+      if (!empty($_POST['presentation'])) {
+        $row[6] += award_experience(3, $level, $_POST['presentation']);
+        $row[1] += award_experience(3, $level, $_POST['presentation']);
+        $run_query = true;
       }
 
+      if ($run_query == true) {
 
-      // Make the UPDATE query:
-      $q = "UPDATE stats SET experience=$row[1], strength=$row[2], agility=$row[3], stamina=$row[4], intelligence=$row[5], charisma=$row[6] WHERE user_id=$row[0]";
-      $r = @mysqli_query($dbc, $q);
+        // Make the UPDATE query:
+        $q = "UPDATE stats SET experience=$row[1], strength=$row[2], agility=$row[3], stamina=$row[4], intelligence=$row[5], charisma=$row[6] WHERE user_id=$row[0]";
+        $r = @mysqli_query($dbc, $q);
 
-      if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
+        if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
 
-        mysqli_close();
-          header ("Location: view_profile.php");
+          mysqli_close();
+            header ("Location: view_profile.php");
 
-        // Print a message:
-        echo '<h1>Thank you!</h1>
-        <p>Your stats have been updated.</p><p><br /></p>';
+          // Print a message:
+          echo '<h1>Thank you!</h1>
+          <p>Your stats have been updated.</p><p><br /></p>';
 
-      } else { // If it did not run OK.
+        } else { // If it did not run OK.
 
-      // Public message:
-      echo '<h1>System Error</h1>
-      <p class="error">Your password could not be changed due to a system error. We apologize for any inconvinience.</p>';
+        // Public message:
+        echo '<h1>System Error</h1>
+        <p class="error">Your stats could not be updated due to a system error. We apologize for any inconvinience.</p>';
 
-      // Debugging message:
-      echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
+        // Debugging message:
+        echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
 
-    } // End of if ($r) IF.
+        } // End of if ($r) IF.
+
+      } else {
+        echo '<h1>Error!</h1>
+        <p class="error">Please fill out at least one of the actitivites.</p>
+        <p><a href="add_activity.php?stat=' . $_POST['stat'] . '">Back</a></p>';
+      }// End if $run_query
 
     mysqli_close($dbc); // Close the database connection.
 
@@ -73,10 +152,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include ('includes/footer.html');
     exit();
 
-  } else { // Invalid email address/password combination.
+  } else { // User not found.
 
     echo '<h1>Error!</h1>
-    <p class="error">The email address and password do not match those on file.</p>';
+    <p class="error">There was an issue finding your information on record. Please logout and log back in. Sorry!</p>';
 
   }
 
@@ -92,15 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 mysqli_close($dbc);
 
 } // End of the main Submit conditional.
-?>
-<h1>Change Your Password</h1>
-<form action="password.php" method="post">
-  <p>Email Address: <input type="text" name="email" size="20" maxlength="60" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" /></p>
-  <p>Current Password: <input type="password" name="pass" size="10" maxlength="20" value="<?php if (isset($_POST['pass'])) echo $_POST['pass']; ?>" /></p>
-  <p>New Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>
-  <p>Confirm New Password: <input type="password" name="pass2" size="10" maxlength="20" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
-  <p><input type="submit" name="submit" value="Register" /></p>
-</form>
-<?php include ('includes/footer.html'); ?>
+
+ include ('includes/footer.html'); ?>
 
 ?>

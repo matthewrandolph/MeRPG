@@ -37,7 +37,7 @@ if (mysqli_num_rows($r) == 1) {
   <p><a href=\"add_activity.php?stat=agility\">Agility:</a> $agi <a href=\"add_activity.php?stat=agility\">Add Activity</a></p>
   <p><a href=\"add_activity.php?stat=stamina\">Stamina:</a> $sta <a href=\"add_activity.php?stat=stamina\">Add Activity</a></p>
   <p><a href=\"add_activity.php?stat=intelligence\">Intelligence:</a> $int <a href=\"add_activity.php?stat=intelligence\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat=charisma\">Charisma:</a> $cha <a href=\"add_activity.php?stat=agility\">Add Activity</p>";
+  <p><a href=\"add_activity.php?stat=charisma\">Charisma:</a> $cha <a href=\"add_activity.php?stat=charisma\">Add Activity</a></p>";
 }
 
 include ("includes/footer.html");
