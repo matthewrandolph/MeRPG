@@ -122,9 +122,10 @@ input, select, .input {
 
 @font-face{
 	font-family: '3dumb';
-	src: url('3dumb.eot');
-	src: url('3dumb.eot?iefix') format('eot'),
-	     url('3dumb.woff') format('woff'),
-	     url('3dumb.ttf') format('truetype'),
-	     url('3dumb.svg#3dumb') format('svg');
+	src: url('3dumb.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: '2dumb';
+	src: url('2dumb.ttf') format('truetype');
 }
