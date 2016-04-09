@@ -23,7 +23,6 @@ a:hover {
 /* body 
 body {
 	background-image:'./img/bg.jpg';
-	color:#555;
 }*/
 
 /* Basic */
@@ -50,7 +49,6 @@ body {
 	width:751px;
 }
 #header h1 {
-	color:#888;
 	font-size:350%;
 	letter-spacing:-3px;
 	text-align:right;
@@ -58,7 +56,7 @@ body {
 	margin-bottom:-20px;
 }
 #header h2 {
-	color:#CCC;
+	color: #555;
 	font-size:200%;
 	letter-spacing:-2px;
 	text-align:right;
