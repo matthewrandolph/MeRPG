@@ -16,14 +16,32 @@
     $bg = '#eeeeee';
   	$bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
 		echo '<form action="add_experience.php" method="post"><tr bgcolor="' . $bg . '">
-  		<td align="left">Weight Training</td>
+  		<td align="left">Low Intensity Weight Training</td>
   		<td align="left"><input type="number" name="weight_training_low" size="4" maxlength="20" value="<?php if (isset($_POST[\'weight_training_low\'])) echo $_POST[\'weight_training_low\']; ?>" /></td>
   	</tr>
   	';
     $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
 		echo '<tr bgcolor="' . $bg . '">
-  		<td align="left">Resistance Training</td>
+  		<td align="left">Medium Intensity Weight Training</td>
+  		<td align="left"><input type="number" name="resistance_training_low" size="4" maxlength="20" value="<?php if (isset($_POST[\'weight_training_medium\'])) echo $_POST[\'weight_training_medium\']; ?>" /></td>
+  	</tr>
+    </table>';
+    $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
+		echo '<tr bgcolor="' . $bg . '">
+  		<td align="left">High Intensity Weight Training</td>
+  		<td align="left"><input type="number" name="resistance_training_low" size="4" maxlength="20" value="<?php if (isset($_POST[\'resistance_training_high\'])) echo $_POST[\'weight_training_high\']; ?>" /></td>
+  	</tr>
+    </table>';
+    $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
+		echo '<tr bgcolor="' . $bg . '">
+  		<td align="left">Low Intensity Resistance Training</td>
   		<td align="left"><input type="number" name="resistance_training_low" size="4" maxlength="20" value="<?php if (isset($_POST[\'resistance_training_low\'])) echo $_POST[\'resistance_training_low\']; ?>" /></td>
+  	</tr>
+    </table>';
+    $bg = ($bg=='#eeeeee' ? '#ffffff' : '#eeeeee');
+		echo '<tr bgcolor="' . $bg . '">
+  		<td align="left">Medium Intensity Resistance Training</td>
+  		<td align="left"><input type="number" name="resistance_training_low" size="4" maxlength="20" value="<?php if (isset($_POST[\'resistance_training_medium\'])) echo $_POST[\'resistance_training_medium\']; ?>" /></td>
   	</tr>
     </table>';
   }
