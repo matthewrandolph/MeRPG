@@ -136,4 +136,89 @@
 
     return $exp;
   }
+
+  function award_experience ($lvl, $intensity) {
+    $offset = (mt_rand(50, 150) / 100.0);
+
+    if ($intensity == 1) {
+      $lvl -= 1;
+    } else if ($intensity == 3) {
+      $lvl += 1;
+    }
+
+    switch ($lvl) {
+    case 0:
+        return floor(50 * $offset);
+        break;
+    case 1:
+        return floor(100 * $offset);
+        break;
+    case 2:
+        return floor(150 * $offset);
+        break;
+    case 3:
+        return floor(200 * $offset);
+        break;
+    case 4:
+        return floor(300 * $offset);
+        break;
+    case 5:
+        return floor(400 * $offset);
+        break;
+    case 6:
+        return floor(600 * $offset);
+        break;
+    case 7:
+        return floor(800 * $offset);
+        break;
+    case 8:
+        return floor(1200 * $offset);
+        break;
+    case 9:
+        return floor(1600 * $offset);
+        break;
+    case 10:
+        return floor(2400 * $offset);
+        break;
+    case 11:
+        return floor(3200 * $offset);
+        break;
+    case 12:
+        return floor(4800 * $offset);
+        break;
+    case 13:
+        return floor(6400 * $offset);
+        break;
+    case 14:
+        return floor(9600 * $offset);
+        break;
+    case 15:
+        return floor(12800 * $offset);
+        break;
+    case 16:
+        return floor(19200 * $offset);
+        break;
+    case 17:
+        return floor(25600 * $offset);
+        break;
+    case 18:
+        return floor(38400 * $offset);
+        break;
+    case 19:
+        return floor(51200 * $offset);
+        break;
+    case 20:
+        return floor(76800 * $offset);
+        break;
+    case 21:
+        return floor(137000 * $offset);
+        break;
+    case 22:
+        return floor(205000 * $offset);
+        break;
+    default:
+        return floor(273000 * $offset);
+        break;
+    }
+  }
 ?>

@@ -24,7 +24,7 @@ a:hover {
 body {
 	background:#ffffff;
 	color:#555;
-	font:0.8em Arial, Helvetica, "bitstream vera sans", sans-serif;
+	font:0.8em "3dumb", Arial, Helvetica, "bitstream vera sans", sans-serif;
 }
 
 /* header */
@@ -118,4 +118,13 @@ input, select, .input {
 	color: #008040;
 	background: #FFFFFF;
 	border:1px dotted #004080;
+}
+
+@font-face{
+	font-family: '3dumb';
+	src: url('3dumb.eot');
+	src: url('3dumb.eot?iefix') format('eot'),
+	     url('3dumb.woff') format('woff'),
+	     url('3dumb.ttf') format('truetype'),
+	     url('3dumb.svg#3dumb') format('svg');
 }
