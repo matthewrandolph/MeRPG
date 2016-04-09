@@ -48,6 +48,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Make the query:
     $q = "INSERT INTO users (first_name, last_name, email, pass, registration_date) VALUES ('$fn', '$ln', '$e', SHA1('$p'), NOW() )";
     $r = @mysqli_query ($dbc, $q); // Run the query.
+
+    $q = "SELECT user_id FROM users WHERE first_name = '$fn' AND last_name = '$ln' AND email='$e'";
+    $r = @mysqli_query ($dbc, $q);
+    $row = mysqli_fetch_array($r);
+
+    $q = "INSERT INTO stats (user_id, experience, strength, agility, stamina, intelligence, charisma) VALUES ({$row['user_id']}, 100, 100, 100, 100, 100, 100)";
+    $r = @mysqli_query ($dbc, $q);
     if ($r) { // If it ran OK>
 
       // Print a message:
