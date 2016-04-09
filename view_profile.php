@@ -32,10 +32,10 @@ if (mysqli_num_rows($r) == 1) {
   <p>To Next Level Up: $next</p>
   <progress value=$exp max=$next></progress>
   <p><a href=\"add_activity.php?stat=strength\">Strength:</a> $str <a href=\"add_activity.php?stat=strength\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat='agility'\">Agility:</a> $agi <a href=\"add_activity.php?stat='agility'\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat='stamina'\">Stamina:</a> $sta <a href=\"add_activity.php?stat='stamina'\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat='intelligence'\">Intelligence:</a> $int <a href=\"add_activity.php?stat='intelligence'\">Add Activity</a></p>
-  <p><a href=\"add_activity.php?stat='charisma'\">Charisma:</a> $cha <a href=\"add_activity.php?stat='agility'\">Add Activity</p>";
+  <p><a href=\"add_activity.php?stat=agility\">Agility:</a> $agi <a href=\"add_activity.php?stat=agility\">Add Activity</a></p>
+  <p><a href=\"add_activity.php?stat=stamina\">Stamina:</a> $sta <a href=\"add_activity.php?stat=stamina\">Add Activity</a></p>
+  <p><a href=\"add_activity.php?stat=intelligence\">Intelligence:</a> $int <a href=\"add_activity.php?stat=intelligence\">Add Activity</a></p>
+  <p><a href=\"add_activity.php?stat=charisma\">Charisma:</a> $cha <a href=\"add_activity.php?stat=agility\">Add Activity</p>";
 }
 
 include ("includes/footer.html");
