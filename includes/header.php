@@ -5,7 +5,15 @@
 	<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
-<body>
+
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main">
+
 	<div id="header">
 		<h1>Me RPG</h1>
 		<h2>Become the best version of yourself</h2>
