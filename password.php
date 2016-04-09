@@ -1,6 +1,6 @@
 <?php # Script 9.7 - password.php
 $page_title = 'Change Your Password';
-include ('includes/header.html');
+include ('includes/header.php');
 
 // Check for form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -1,6 +1,6 @@
 <?php # Script 9.3 - register.php
 $page_title = 'Register';
-include ('includes/header.html');
+include ('includes/header.php');
 
 // Check for form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

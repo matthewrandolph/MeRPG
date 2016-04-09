@@ -17,15 +17,13 @@
 			<li><a href="view_users.php">View Users</a></li>
 			<li><a href="password.php">Change Password</a></li>
 			<li><?php // Create a login/logout link:
-				if ( (isset($_COOKIE['user_id'])) && (basename($_SERVER['PHP_SELF']) != 'logout.php') ) {
-					echo '<a href="logout.php">
-						Logout</a>';
-				} else {
-					echo '<a href="login.php">
-						Login</a>';
-				}
-			?></li>
+if ( (isset($_COOKIE['user_id'])) && (basename($_SERVER['PHP_SELF']) != 'logout.php') ) {
+	echo '<a href="logout.php">Logout</a>';
+} else {
+	echo '<a href="login.php">Login</a>';
+}
+?></li>
 		</ul>
 	</div>
 	<div id="content"><!-- Start of the page-specific content. -->
-<!-- Script 3.2 - header.html -->
+<!-- Script 12.7 - header.html -->
