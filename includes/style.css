@@ -102,13 +102,13 @@ a:hover {
 	letter-spacing:-3px;
 	text-align:right;
 	padding:5px;
-	margin-bottom:-20px;
+	margin-bottom:-10px;
 }
 #header h2 {
 	color: #444;
-	font-size:200%;
 	letter-spacing:-2px;
 	text-align:right;
+	font-family: '2dumb';
 }
 
 /* navigation */
