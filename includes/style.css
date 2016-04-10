@@ -35,7 +35,7 @@ a:hover {
 		position: relative;
 		max-width: 100%;
 		min-width: 27em;
-		padding: 4.5em 3em 3em 3em ;
+		padding: 0.5em 3em 3em 3em ;
 		background: #ffffff;
 		border-radius: 4px;
 		cursor: default;
@@ -97,11 +97,11 @@ a:hover {
 	width:751px;
 }
 
-#header-left { 
+#header-left {
 	float: left;
 	width: 50%;
 	}
-	
+
 #header-right {
 	float: right;
 	width: 50%;
