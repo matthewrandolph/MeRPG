@@ -4,6 +4,7 @@
 <?php # Script 9.3 - register.php
 $page_title = 'Register';
 include ('includes/header.php');
+require ('includes/login_functions.inc.php');
 
 // Check for form submission:
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -60,7 +61,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $q = "INSERT INTO stats (user_id, experience, strength, agility, stamina, intelligence, charisma, avatar) VALUES ({$row['user_id']}, 100, 100, 100, 100, 100, 100, '$avatar')";
     $r = @mysqli_query ($dbc, $q);
-    if ($r) { // If it ran OK>
+    if ($r) { // If it ran OK
+
+      // Set the cookies:
+      setcookie ('user_id', $row['user_id'], time()+3600, '/', '', 0, 0);
+      setcookie ('first_name', $fn, time()+3600, '/', '', 0, 0);
+
+      // Redirect:
+      redirect_user('loggedin.php');
 
       // Print a message:
       echo '<h1>Thank you for joining our community!</h1>
