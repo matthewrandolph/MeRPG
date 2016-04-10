@@ -32,12 +32,12 @@ height: 292px;
 }
 
 
-/*img#red:hover{
+img#red:hover{
   border-color: #66afe9;
   box-shadow: 0 0 50px rgba(255,0,0, 0.6);
   width: 160px;
   height: 432px;
-}*/
+}
 
 body {
     background-image: url("./img/bg.jpg");
@@ -52,45 +52,19 @@ body {
 </head>
 	
 <body>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script type="text/javascript" src="./scripts/jquery.roundabout.min.js"></script>
-<script type="text/javascript">
-$('#carousel').roundabout({
-    childSelector:"img",
-    minOpacity:1,
-    autoplay:true,
-    autoplayDuration:5000,
-    autoplayPauseOnHover:true
-});
-</script>
 
 <h1>Pick your avatar!</h1>
 <center>
-<div id="carousel">
-	<a href="./register.php?avatar=malehuman"><img src="./img/MaleHuman.png" alt="Male Human Character" class="slide" id="red"></a>
-	<a href="./register.php?avatar=malehalfling"><img src="./img/MaleHalfling.png" alt="Male Halfing Character" class="slide" id="red"></a>
-	<a href="./register.php?avatar=maleelf"><img src="./img/MaleElf.png" alt="Male Elf Character" class="slide" id="red"></a>
-	<a href="./register.php?avatar=maledwarf"><img src="./img/MaleDwarf.png" alt="Male Elf Character" class="slide" id="red"></a>
-	<a href="./register.php?avatar=femalehuman"><img src="./img/FemaleHuman.png" alt="Female Human Character" class="slide" id="red"></a>
-    <a href="./register.php?avatar=femalehalfling"><img src="./img/FemaleHalfling.png" alt="Female Halfling Character" class="slide" id="red"></a>
-    <a href="./register.php?avatar=femaleelf"><img src="./img/FemaleElf.png" alt="Female Elf Character" class="slide" id="red"></a>
-    <a href="./register.php?avatar=femaledwarf"><img src="./img/FemaleDwarf.png" alt="Female Dwarf Character" class="slide" id="red"></a>
-</div>
+
+	<a href="./register.php?avatar=malehuman"><img src="./img/MaleHuman.png" alt="Male Human Character" id="red"></a>
+	<a href="./register.php?avatar=malehalfling"><img src="./img/MaleHalfling.png" alt="Male Halfing Character" id="red"></a>
+	<a href="./register.php?avatar=maleelf"><img src="./img/MaleElf.png" alt="Male Elf Character" id="red"></a>
+	<a href="./register.php?avatar=maledwarf"><img src="./img/MaleDwarf.png" alt="Male Elf Character" id="red"></a>
+	<a href="./register.php?avatar=femalehuman"><img src="./img/FemaleHuman.png" alt="Female Human Character" id="red"></a>
+    <a href="./register.php?avatar=femalehalfling"><img src="./img/FemaleHalfling.png" alt="Female Halfling Character" id="red"></a>
+    <a href="./register.php?avatar=femaleelf"><img src="./img/FemaleElf.png" alt="Female Elf Character" id="red"></a>
+    <a href="./register.php?avatar=femaledwarf"><img src="./img/FemaleDwarf.png" alt="Female Dwarf Character" id="red"></a>
 </center>
-<!-- <table  class="centerTable">
-  <tr>
-    	<td><a href="./register.php?avatar=malehuman"><img src="./img/MaleHuman.png" alt="Male Human Character" class="red"></a></td>
-    	<td><a href="./register.php?avatar=malehalfling"><img src="./img/MaleHalfling.png" alt="Male Halfing Character" class="red"></a></td> 
-   		<td><a href="./register.php?avatar=maleelf"><img src="./img/MaleElf.png" alt="Male Elf Character" class="red"></a></td> 
-   		<td><a href="./register.php?avatar=maledwarf"><img src="./img/MaleDwarf.png" alt="Male Elf Character" class="red"></a></td>
-  </tr>
-  <tr>
-    	<td><a href="./register.php?avatar=femalehuman"><img src="./img/FemaleHuman.png" alt="Female Human Character" class="red"></a></td>
-    	<td><a href="./register.php?avatar=femalehalfling"><img src="./img/FemaleHalfling.png" alt="Female Halfling Character" class="red"></a></td>
-    	<td><a href="./register.php?avatar=femaleelf"><img src="./img/FemaleElf.png" alt="Female Elf Character" class="red"></a></td>  
-    	<td><a href="./register.php?avatar=femaledwarf"><img src="./img/FemaleDwarf.png" alt="Female Dwarf Character" class="red"></a></td>
-  </tr>
-</table>	  -->	
 			
 	</body>
 </html>
