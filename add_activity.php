@@ -263,7 +263,7 @@
   }
 
   echo '<p></p>
-    <input type="submit" name="submit" value="Submit" />
+    <input type="submit" name="submit" value="SUBMIT" />
     <input type="hidden" name="stat" value="' . $_GET['stat'] . '" />
     </form>
     ';

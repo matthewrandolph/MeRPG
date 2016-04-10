@@ -29,4 +29,3 @@ In the future Me RPG plans to reveal new characters to be unlocked at certain le
 Sims 3 - Characters
 
 Paint - Logos
-
