@@ -23,7 +23,7 @@
 </div>
 	<div id="navigation">
 		<ul>
-			<li><a href="register.php">Register</a></li>
+			<li><a href="../CharacterSelect/index.html">Register</a></li>
 			<li><a href="view_profile.php">View Profile</a></li>
 			<li><a href="password.php">Change Password</a></li>
 			<li><?php // Create a login/logout link:
