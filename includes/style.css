@@ -92,7 +92,7 @@ a:hover {
 
 /* header */
 #header {
-	height:80px;
+	height:90px;
 	margin:15 auto;
 	width:751px;
 }
@@ -112,13 +112,14 @@ a:hover {
 	letter-spacing:-3px;
 	text-align:right;
 	padding:5px;
-	margin-bottom:-10px;
+	margin-bottom:10px;
 }
 #header h2 {
 	color: #444;
 	letter-spacing:-2px;
 	text-align:right;
 	font-family: '2dumb';
+	margin-top:-10px;
 }
 
 /* navigation */
