@@ -7,7 +7,9 @@ Me RPG is a task gamification web application. When you start with Me RPG, you a
 
 ## How We Built It
 My RPG is primarily built in PHP, with a splattering of raw HTML, Javascript, and CSS Markup.
+
 Characters were created in Sims 3 and then cropped and edited.
+
 Our code editors of choice were TextWrangler and Atom.
 
 ## Challenges We Ran Into
@@ -21,5 +23,6 @@ In the future Me RPG plans to reveal new characters to be unlocked at certain le
 
 ## Built With
 Sims 3 - Characters
+
 Paint - Logos
 
