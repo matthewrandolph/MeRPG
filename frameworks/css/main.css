@@ -33,6 +33,16 @@
 		display: block;
 	}
 
+	section a:hover {
+    background-color: black;
+	}
+
+	section a {
+		border-radius: 25px;
+		border: 1px solid black;
+		padding: 9px;
+	}
+
 	body {
 		line-height: 1;
 	}
@@ -178,7 +188,7 @@
 		}
 
 		a:hover {
-			color: #ff7496;
+			color: #41cc30;
 		}
 
 	strong, b {
@@ -207,8 +217,8 @@
 		}
 
 	h1 {
-		font-size: 1.85em;
-		letter-spacing: 0.22em;
+		font-size: 3.85em;
+		letter-spacing: 0.02em;
 		margin: 0 0 0.525em 0;
 	}
 

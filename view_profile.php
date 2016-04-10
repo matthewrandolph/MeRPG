@@ -39,32 +39,32 @@ if (mysqli_num_rows($r) == 1) {
   ';
   echo "
   <tr>
-    <td align=\"center\"><progress value=$exp max=$next></progress></td>
+    <td colspan=3 align=\"center\"><progress value=$exp max=$next></progress></td>
   </tr>
   <tr>
-    <td align=\"left\"><a href=\"add_activity.php?stat=strength\">Strength:</a></td>
+    <td align=\"left\"><a href=\"add_activity.php?stat=strength\"><img src=\"img/red.png\" /> Strength:</a></td>
     <td align=\"left\">$str</td>
-    <td class='add' align=\"left\"><a href=\"add_activity.php?stat=strength\">Add Activity</a></td>
+    <td class='add1' align=\"left\"><a href=\"add_activity.php?stat=strength\">Add Activity</a></td>
   </tr>
   <tr>
-    <td align=\"left\"><a href=\"add_activity.php?stat=agility\">Agility:</a></td>
+    <td align=\"left\"><a href=\"add_activity.php?stat=agility\"><img src=\"img/green.png\" /> Agility:</a></td>
     <td align=\"left\">$agi</td>
-    <td nowrap class='add' align=\"left\"><a href=\"add_activity.php?stat=agility\">Add Activity</a></td>
+    <td nowrap class='add2' align=\"left\"><a href=\"add_activity.php?stat=agility\">Add Activity</a></td>
   </tr>
   <tr>
-    <td><a href=\"add_activity.php?stat=stamina\">Stamina:</a></td>
+    <td><a href=\"add_activity.php?stat=stamina\"><img src=\"img/yellow.png\" /> Stamina:</a></td>
     <td>$sta</td>
-    <td nowrap class='add'><a href=\"add_activity.php?stat=stamina\">Add Activity</a></td>
+    <td nowrap class='add3'><a href=\"add_activity.php?stat=stamina\">Add Activity</a></td>
   </tr>
   <tr>
-    <td><a href=\"add_activity.php?stat=intelligence\">Intelligence:</a></td>
+    <td><a href=\"add_activity.php?stat=intelligence\"><img src=\"img/blue.png\" /> Intelligence:</a></td>
     <td>$int</td>
-    <td nowrap class='add'><a href=\"add_activity.php?stat=intelligence\">Add Activity</a></td>
+    <td nowrap class='add4'><a href=\"add_activity.php?stat=intelligence\">Add Activity</a></td>
   </tr>
   <tr>
-    <td><a href=\"add_activity.php?stat=charisma\">Charisma:</a></td>
+    <td><a href=\"add_activity.php?stat=charisma\"><img src=\"img/purple.png\" /> Charisma:</a></td>
     <td>$cha</td>
-    <td nowrap class='add'><a href=\"add_activity.php?stat=charisma\">Add Activity</a></td>
+    <td nowrap class='add5'><a href=\"add_activity.php?stat=charisma\">Add Activity</a></td>
   </tr>
   </table>
   ";
