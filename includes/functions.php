@@ -137,9 +137,13 @@
     return $exp;
   }
 
-  function award_experience ($lvl, $intensity, $time) {
+  function award_experience ($lvl, $intensity, $time, $category) {
 
-    $hours = $time / 60.0;
+    if ($category == "minutes") {
+      $hours = $time / 60.0;
+    } else {
+      $hours = $time;
+    }
 
     if ($intensity == 1) {
       $lvl -= 1;
