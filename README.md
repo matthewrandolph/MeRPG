@@ -28,6 +28,8 @@ We learned how much easier it is to work on such a project with tracking and col
 ## What's Next for Me RPG
 In the future, Me RPG plans to reveal new characters to be unlocked at certain levels, a mobile app interface, connecting to activity monitors such as the Fitbit, and the possibility of battling other people's avatars.  Another thought to encourage use of the app is to penalize users who don't consistently enter tasks completed by taking away experience points and potentially leveling down their character.
 
+Me RPG will also be integrated with an open-source RPG game where the character's avatar will be reflected in the character in the game -- the stats of the character will be based on the stats of the avatar.
+
 ## Built With
 Sims 3 - Characters
 
