@@ -3,10 +3,12 @@
 As a group there was two main interests that we could agree on, fitness and gaming. So as a group we decided to find a way to connect both and came up with Me RPG.
 
 ## What It Does
-Me RPG is a website where you can level up your avatar by doing the exercises yourself. For example if you went running for an hour you input it into RPG in order to level up your avatar.
+Me RPG is a task gamification web application. When you start with Me RPG, you are given a low-level avatar that you can level up by performing healthy tasks, such as exercise, yourself.
 
 ## How We Built It
+My RPG is primarily built in PHP, with a splattering of raw HTML, Javascript, and CSS Markup.
 Characters were created in Sims 3 and then cropped and edited.
+Our code editors of choice were TextWrangler and Atom.
 
 ## Challenges We Ran Into
 
