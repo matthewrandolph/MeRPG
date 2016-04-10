@@ -23,7 +23,6 @@
 </div>
 	<div id="navigation">
 		<ul>
-			<li><a href="index.html">Home Page</a></li>
 			<li><a href="register.php">Register</a></li>
 			<li><a href="view_profile.php">View Profile</a></li>
 			<li><a href="password.php">Change Password</a></li>
