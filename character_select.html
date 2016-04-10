@@ -8,65 +8,62 @@
 
 <style>
 
-@font-face{
+	@font-face{
+		font-family: '3dumb';
+		src: url('./includes/3dumb.ttf') format('truetype');
+	}
+
+	@font-face{
+		font-family: '2dumb';
+		src: url('./includes/2dumb.ttf') format('truetype');
+	}
+
+	.centerTable { margin: 0px auto; }
+
+	h1 {
+	text-align: center;
 	font-family: '3dumb';
-	src: url('./includes/3dumb.ttf') format('truetype');
-}
+	padding-top: 50px;
+	}
 
-@font-face{
-	font-family: '2dumb';
-	src: url('./includes/2dumb.ttf') format('truetype');
-}
+	img {
+	width: 112px;
+	height: 292px;
+	}
 
-.centerTable { margin: 0px auto; }
+	img:hover {
+		transform: scale(1.3);
+	}
 
-h1 {
-text-align: center;
-font-family: '3dumb';
-padding-top: 50px;
-}
-
-img {
-width: 112px;
-height: 292px;
-}
-
-img:hover {
-	transform: scale(1.3);
-}
-
-body {
-    background-image: url("./img/bg.jpg");
-}
+	body {
+	    background-image: url("./img/bg.jpg");
+	}
 
 </style>
 
 <head>
-<title>Me RPG</title>
-<meta charset="utf-8" />
-
+	<title>Me RPG</title>
+	<meta charset="utf-8" />
 </head>
 
 <body>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-
-</script>
+=======
+>>>>>>> origin/master
 
 <h1>Pick your avatar!</h1>
 <br />
 <br />
 <center>
-<div>
-	<a href="./register.php?avatar=malehuman"><img src="./img/MaleHuman.png" alt="Male Human Character" class="slide" id="red"></a>
-	<a href="./register.php?avatar=malehalfling"><img src="./img/MaleHalfling.png" alt="Male Halfing Character" class="slide" id="red"></a>
-	<a href="./register.php?avatar=maleelf"><img src="./img/MaleElf.png" alt="Male Elf Character" class="slide" id="red"></a>
-	<a href="./register.php?avatar=maledwarf"><img src="./img/MaleDwarf.png" alt="Male Elf Character" class="slide" id="red"></a>
-	<a href="./register.php?avatar=femalehuman"><img src="./img/FemaleHuman.png" alt="Female Human Character" class="slide" id="red"></a>
-  <a href="./register.php?avatar=femalehalfling"><img src="./img/FemaleHalfling.png" alt="Female Halfling Character" class="slide" id="red"></a>
-  <a href="./register.php?avatar=femaleelf"><img src="./img/FemaleElf.png" alt="Female Elf Character" class="slide" id="red"></a>
-  <a href="./register.php?avatar=femaledwarf"><img src="./img/FemaleDwarf.png" alt="Female Dwarf Character" class="slide" id="red"></a>
-</div>
+	<a href="./register.php?avatar=malehuman"><img src="./img/MaleHuman.png" alt="Male Human Character" id="red"></a>
+	<a href="./register.php?avatar=malehalfling"><img src="./img/MaleHalfling.png" alt="Male Halfing Character" id="red"></a>
+	<a href="./register.php?avatar=maleelf"><img src="./img/MaleElf.png" alt="Male Elf Character" id="red"></a>
+	<a href="./register.php?avatar=maledwarf"><img src="./img/MaleDwarf.png" alt="Male Elf Character" id="red"></a>
+	<a href="./register.php?avatar=femalehuman"><img src="./img/FemaleHuman.png" alt="Female Human Character" id="red"></a>
+  <a href="./register.php?avatar=femalehalfling"><img src="./img/FemaleHalfling.png" alt="Female Halfling Character" id="red"></a>
+  <a href="./register.php?avatar=femaleelf"><img src="./img/FemaleElf.png" alt="Female Elf Character" id="red"></a>
+  <a href="./register.php?avatar=femaledwarf"><img src="./img/FemaleDwarf.png" alt="Female Dwarf Character" id="red"></a>
 </center>
 
-	</body>
+</body>
 </html>
