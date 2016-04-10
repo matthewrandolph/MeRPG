@@ -103,5 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <p>Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>
   <p>Confirm Password: <input type="password" name="pass2" size="10" maxlength="20" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
   <p><input type="submit" name="submit" value="Register" /></p>
+  <input type="hidden" name="avatar" value="<?php $_GET['avatar']; ?>" />
 </form>
 <?php include ('includes/footer.html'); ?>
