@@ -92,11 +92,21 @@ a:hover {
 
 /* header */
 #header {
-	border-bottom:1px solid #999;
 	height:80px;
-	margin:0 auto;
+	margin:15 auto;
 	width:751px;
 }
+
+#header-left { 
+	float: left;
+	width: 50%;
+	}
+	
+#header-right {
+	float: right;
+	width: 50%;
+	}
+
 #header h1 {
 	font-size:350%;
 	letter-spacing:-3px;
@@ -113,6 +123,7 @@ a:hover {
 
 /* navigation */
 #navigation {
+	border-top:1px solid #999;
 	background:#fafafa;
 	border-right:1px solid #999;
 	margin:0 auto;

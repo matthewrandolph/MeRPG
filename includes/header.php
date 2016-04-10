@@ -13,11 +13,14 @@
 
 				<!-- Main -->
 					<section id="main">
-
-	<div id="header">
+<div id="header">
+	<div id="header-left">
+		<a href="./index.html"><img src="./img/rsz_logowhite.png" width="155px" height="94px" /></a></div>
+	<div id="header-right">
 		<h1>Me RPG</h1>
 		<h2>Become the best version of yourself</h2>
 	</div>
+</div>
 	<div id="navigation">
 		<ul>
 			<li><a href="index.html">Home Page</a></li>
