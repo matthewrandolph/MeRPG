@@ -23,9 +23,10 @@
 </div>
 	<div id="navigation">
 		<ul>
-			<li><a href="../CharacterSelect/index.html">Register</a></li>
+			<li><a href="high_score.php">Leaderboard</a></li>
 			<li><a href="view_profile.php">View Profile</a></li>
 			<li><a href="password.php">Change Password</a></li>
+			<li><a href="./CharacterSelect/index.html">Register</a></li>
 			<li><?php // Create a login/logout link:
 if ( (isset($_COOKIE['user_id'])) && (basename($_SERVER['PHP_SELF']) != 'logout.php') ) {
 	echo '<a href="logout.php">Logout</a>';

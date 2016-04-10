@@ -109,9 +109,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $run_query = true;
       }
       if (!empty($_POST['presentation'])) {
-        $row[6] += award_experience(3, $level, $_POST['presentation']);
-        $row[1] += award_experience(3, $level, $_POST['presentation']);
+        $row[6] += award_experience(3, $level, $_POST['presentation'], $_POST['p_ddl']);
+        $row[1] += award_experience(3, $level, $_POST['presentation'], $_POST['p_ddl']);
         $run_query = true;
+      }
+
+      $level_new = calculate_level( $row[1] );
+      $level_up = false;
+
+      if ($level != $level_new) {
+        $level_up = true;
       }
 
       if ($run_query == true) {
@@ -123,12 +130,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if (mysqli_affected_rows($dbc) == 1) { // If it ran OK.
 
-          mysqli_close();
-            header ("Location: view_profile.php");
-
-          // Print a message:
-          echo '<h1>Thank you!</h1>
-          <p>Your stats have been updated.</p><p><br /></p>';
+          if ($level_up != true) {
+            // Print a message:
+            echo '<h1>Thank you!</h1>
+            <p>Your stats have been updated.</p><p><br /></p>';
+          } else {
+            echo '<h1>Congratuations!</h1>
+            <p>You have leveled up! Check out your <a href="view_profile.php">profile page</a> to see your new level!</p>';
+          }
 
         } else { // If it did not run OK.
 

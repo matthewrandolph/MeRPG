@@ -15,7 +15,7 @@ include ("includes/functions.php");
 
 require ('../../mysqli_connect.php');
 
-$q = "SELECT experience, strength, agility, stamina, intelligence, charisma FROM stats WHERE user_id = {$_COOKIE['user_id']}";
+$q = "SELECT experience, strength, agility, stamina, intelligence, charisma, avatar FROM stats WHERE user_id = {$_COOKIE['user_id']}";
 $r = @mysqli_query($dbc, $q);
 if (mysqli_num_rows($r) == 1) {
 
@@ -28,10 +28,11 @@ if (mysqli_num_rows($r) == 1) {
   $cha = $row['charisma'];
   $lvl = calculate_level($exp);
   $next = to_next_level($exp);
+  $avatar = $row['avatar'];
 
   echo "<h1>Level <span style='font-family:\"2dumb\"' id='lvl'>$lvl</span></h1>";
 
-  echo '<table align="center" cellspacing="5" cellpadding="5" width="75%">
+  echo '<table class="profile_table" align="center" cellspacing="5" cellpadding="5" width="75%">
   <tr>
     <td align="left"><b>Current Experience: ' . $exp . '</b></td>
     <td align="left"><b>Next Level Up At: ' . $next . '</b></td>
@@ -68,6 +69,8 @@ if (mysqli_num_rows($r) == 1) {
   </tr>
   </table>
   ";
+  echo "<img class=\"portrait\" align=\"right\" src=\"img/$avatar" . "head.png\" />";
+  echo "<div style=\"clear:both\"></div>";
 }
 
 include ("includes/footer.html");

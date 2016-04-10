@@ -131,11 +131,12 @@ a:hover {
 	width:750px;
 	height:40px;
 	list-style:none;
+	clear: both;
 }
 #navigation li {
 	border-left:1px solid #999;
 	float:left;
-	width:185px;
+	width:149px;
 	list-style:none;
 	font-size: 130%;
 }
@@ -231,6 +232,17 @@ input, select, .input {
 	background: #FFFFFF;
 	border:1px dotted #004080;
 	cursor: pointer;
+}
+
+.profile_table {
+	float: left;
+}
+
+.portrait {
+	padding-top: 35px;
+	float: right;
+	height: 150px;
+	width: 150px;
 }
 
 @font-face{
