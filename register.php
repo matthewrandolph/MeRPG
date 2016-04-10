@@ -44,6 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors[] = 'You forgot to enter your password';
   }
 
+  $avatar = $_POST['avatar'];
+
   if (empty($errors)) { // If everything's OK.
 
     // Register the user in the database...
@@ -56,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $r = @mysqli_query ($dbc, $q);
     $row = mysqli_fetch_array($r);
 
-    $q = "INSERT INTO stats (user_id, experience, strength, agility, stamina, intelligence, charisma) VALUES ({$row['user_id']}, 100, 100, 100, 100, 100, 100)";
+    $q = "INSERT INTO stats (user_id, experience, strength, agility, stamina, intelligence, charisma, avatar) VALUES ({$row['user_id']}, 100, 100, 100, 100, 100, 100, '$avatar')";
     $r = @mysqli_query ($dbc, $q);
     if ($r) { // If it ran OK>
 
@@ -103,6 +105,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <p>Password: <input type="password" name="pass1" size="10" maxlength="20" value="<?php if (isset($_POST['pass1'])) echo $_POST['pass1']; ?>" /></p>
   <p>Confirm Password: <input type="password" name="pass2" size="10" maxlength="20" value="<?php if (isset($_POST['pass2'])) echo $_POST['pass2']; ?>" /></p>
   <p><input type="submit" name="submit" value="Register" /></p>
-  <input type="hidden" name="avatar" value="<?php $_GET['avatar']; ?>" />
+  <input type="hidden" name="avatar" value="<?php echo $_GET['avatar']; ?>" />
 </form>
 <?php include ('includes/footer.html'); ?>
