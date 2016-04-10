@@ -1,4 +1,8 @@
 # MeRPG
+
+## Note to Developers:
+This project is built using MySQL. As such, without an appropriate database and database connection files, this project will throw a bunch of error messages, complaining of missing files and the like. Keep that in mind if you decide to download or fork this project!
+
 ## Inspiration
 As a group there was two main interests that we could agree on, fitness and gaming. So as a group we decided to find a way to connect both and came up with Me RPG.
 
