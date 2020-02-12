@@ -1,7 +1,7 @@
-<link rel="stylesheet" href="includes/style.css" type="text/css" media="screen" />
-
-
 <?php # Script 9.3 - register.php
+
+ob_start();
+
 $page_title = 'Register';
 include ('includes/header.php');
 require ('includes/login_functions.inc.php');
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       // Public message:
       echo '<h1>System Error</h1>
-      <p class="error">You could not be registered due to a system error. We apologize for any inconvinience.</p>';
+      <p class="error">You could not be registered due to a system error. We apologize for any inconvenience.</p>';
 
       // Debugging message:
       echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
@@ -104,6 +104,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   mysqli_close($dbc);
 
 } // End of the main Submit conditional.
+
+ob_end_flush();
+
 ?>
 <h1>Register</h1>
 <form action="register.php" method="post">

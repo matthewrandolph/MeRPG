@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
       // Public message:
       echo '<h1>System Error</h1>
-      <p class="error">Your password could not be changed due to a system error. We apologize for any inconvinience.</p>';
+      <p class="error">Your password could not be changed due to a system error. We apologize for any inconvenience.</p>';
 
       // Debugging message:
       echo '<p>' . mysqli_error($dbc) . '<br /><br />Query: ' . $q . '</p>';
